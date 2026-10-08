@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse-Following Line-Art Animal</title>
+    <meta name="description" content="Interactive procedural line-art animal system that follows the mouse cursor.">
+    <link rel="icon" href="https://lh3.googleusercontent.com/d/1p7F0YC1s756Um7lYH85n1uT3QpY9K8-O">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- This canvas hosts the procedural line-art animation -->
+    <canvas id="animalCanvas"></canvas>
+
+    <!-- Minimal Floating UI (Production Mode) -->
+    <div id="animalSelector" class="premium-selector">
+        <select id="presetSelect" class="control-select">
+            <option value="lizard">Lizard</option>
+            <option value="snake">Snake</option>
+            <option value="dragon">Winged Dragon</option>
+            <option value="bird">Flying Bird</option>
+            <option value="centipede">Centipede</option>
+        </select>
+    </div>
+
+    <!-- Main script -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

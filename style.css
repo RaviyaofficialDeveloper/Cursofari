@@ -1,0 +1,76 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --control-bg: rgba(255, 255, 255, 0.85);
+    --control-border: rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #1a1a1a;
+        --text-color: #e0e0e0;
+        --control-bg: rgba(40, 40, 40, 0.85);
+        --control-border: rgba(255, 255, 255, 0.1);
+    }
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--bg-color);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Canvas is fixed and does not intercept normal pointer events 
+   unless it needs to. But since there is no other content here, 
+   we can just track on document.body */
+#animalCanvas {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allows clicking through the canvas to links/buttons below */
+    z-index: 9998;
+}
+
+/* Premium Minimal Selector */
+.premium-selector {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+}
+
+.premium-selector select {
+    appearance: none;
+    background: rgba(20, 20, 20, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    font-size: 13px;
+    font-family: inherit;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.premium-selector select:hover {
+    background: rgba(20, 20, 20, 0.6);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.premium-selector select option {
+    background: #1a1a1a;
+    color: #fff;
+}
